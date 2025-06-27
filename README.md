@@ -2,7 +2,7 @@
 
 
 ## Banco de dados
-[Modelo Relacional](https://imgur.com/7e2ezXj)
+![Modelo Relacional](https://imgur.com/7e2ezXj.png)
 
 
 
