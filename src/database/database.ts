@@ -1,15 +1,19 @@
 import { DataSource } from "typeorm";
+import { Comum } from "./entity/Comum";
+import { Lojista } from"./entity/Lojista";
+import {Transacao} from "./entity/Transacao";
+import { Usuario } from "./entity/Usuario";
 
 export const AppDataSource = new DataSource({
     type: "postgres",
     host: "localhost",
     port: 5432,
     username: "postgres",
-    password: "123456",
+    password: "postgres",
     database: "picpay",
     synchronize: true,
     logging: false,
-    entities: ["src/entities/*.ts"],
+    entities: [Comum,Lojista,Transacao],
     migrations: ["src/migrations/*.ts"],
     subscribers: [],
 });
