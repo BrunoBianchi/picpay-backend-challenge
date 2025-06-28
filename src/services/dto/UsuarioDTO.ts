@@ -1,6 +1,10 @@
 import { IsEmail, IsNotEmpty, IsNumber, IsPositive, IsString, IsStrongPassword, Min } from "class-validator";
 
 export class UsuarioDTO {
+    constructor(partial:Partial<UsuarioDTO>){
+        Object.assign(this,partial);
+    }
+
     @IsString()
     @IsNotEmpty()
     nome!:string;
@@ -10,7 +14,7 @@ export class UsuarioDTO {
     @IsEmail()
     email!:string;
 
-    @IsStrongPassword({minLength:6})
+    @IsStrongPassword({minLength:8})
     senha!:string;
 
     @IsNotEmpty()
