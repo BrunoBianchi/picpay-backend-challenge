@@ -1,5 +1,5 @@
-import { UserType } from "../types/userType";
+import { UsuarioInterface } from "./UsuarioInterface";
 
-export interface ComumInterface extends Omit<UserType,"id"> {
+export interface ComumInterface extends Omit<UsuarioInterface,"id"> {
     cpf:string;
 }
